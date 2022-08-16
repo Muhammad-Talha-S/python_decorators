@@ -17,19 +17,9 @@ class decorator_cls(object):
         print('Call Method Ran')
         self.orignal_fun(*args , **kwargs)
 
-
-
 @decorator_fun
 def display():
     print('Display Function Ran')
-
-# @decorator_fun
-# def display_info(name, age):
-#     print(f'Information Below')
-#     print(f'Name : {name}')
-#     print(f'Age : {age}')
-
-
 
 def my_logger(orignal_function):
     logging.basicConfig(filename='output.log',level=logging.INFO)
@@ -40,18 +30,6 @@ def my_logger(orignal_function):
     
     return wrapper_fun
     
-
-# display()
-# display_info('Talha' , 22)
-
-# @my_logger
-# def display_info(name, age):
-#     print(f'Information Below')
-#     print(f'Name : {name}')
-#     print(f'Age : {age}')
-
-# display_info('Ali' , 22)
-
 @my_logger
 @imp.timer_func
 def display_info(name, age , Industry):
