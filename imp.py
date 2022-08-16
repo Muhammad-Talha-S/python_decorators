@@ -1,5 +1,4 @@
 import time
-import logging
 from functools import wraps
 
 def timer_func(func):
