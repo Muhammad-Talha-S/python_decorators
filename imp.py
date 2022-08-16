@@ -8,11 +8,10 @@ def timer_func(func):
 
     @wraps(func)
     def wrap_func(*args, **kwargs):
-        logging.basicConfig(filename='timer.log',level=logging.DEBUG)
-        logging.debug(f'Start {name}')
         t1 = time.perf_counter()
         result = func(*args, **kwargs)
+        time.sleep(1)
         t2 = time.perf_counter()
-        logging.debug(f'Completed {name} in {"%.2gs" % (t2 - t1)}')
+        print(f'Completed {name} in {"%.2gs" % (t2 - t1)}')
         return result
     return wrap_func

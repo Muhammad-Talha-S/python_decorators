@@ -54,9 +54,7 @@ def my_logger(orignal_function):
 
 @my_logger
 @imp.timer_func
-def display_info(name, age):
-    print(f'Information Below')
-    print(f'Name : {name}')
-    print(f'Age : {age}')
+def display_info(name, age , Industry):
+    print(f'{name} is {age} years old and he works at {Industry}')
 
-display_info('Talha' , 22)
+display_info('Talha' , 22, 'SOCO Engineers')
