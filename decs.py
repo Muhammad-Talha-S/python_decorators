@@ -58,3 +58,11 @@ def display_info(name, age , Industry):
     print(f'{name} is {age} years old and he works at {Industry}')
 
 display_info('Talha' , 22, 'SOCO Engineers')
+
+@decorator_cls
+@imp.timer_func
+@my_logger
+def display_info_using_class_as_decorator(name, age , Industry):
+    print(f'{name} is {age} years old and he works at {Industry}')
+
+display_info_using_class_as_decorator('Arslan',23,'SOCO Engineers')
