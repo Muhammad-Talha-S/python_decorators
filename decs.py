@@ -1,3 +1,7 @@
+'''
+Muhammad Talha Saleem
+Python Decorators
+'''
 import logging
 import imp
 from functools import wraps
